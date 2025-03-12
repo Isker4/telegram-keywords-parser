@@ -12,8 +12,8 @@ api_id   = config['Telegram']['API_ID']
 api_hash = config['Telegram']['API_HASH']
 username = config['Telegram']['USERNAME']
 
-start_date = datetime.datetime.now() - relativedelta(days=2) # Формируем дату на нужное количество дней назад
-limit = 10 # Максимальное количество сообщений из каждого телеграм-канала, в которых будет поиск
+start_date = datetime.datetime.now() - relativedelta(days=365) # Формируем дату на нужное количество дней назад
+limit = 500 # Максимальное количество сообщений из каждого телеграм-канала, в которых будет поиск
 
 with open('keywords.txt', 'r') as file:
 	keywords_list=file.read().lower().splitlines() # список ключевых слов прочитали построчно из файла, привели к нижнему регистру
